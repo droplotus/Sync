@@ -21,12 +21,6 @@ def sync_folders(source, replica):
         relative_path = os.path.relpath(src_dir, source)
         dst_dir = os.path.join(replica, relative_path)
 
-        print("====")
-        print(src_dir)
-        print(dirs)
-        print(files)
-        print("====")
-
         logging.debug(f"Processing source directory: {src_dir} -> Replica directory: {dst_dir}")
 
         if not os.path.exists(dst_dir):
